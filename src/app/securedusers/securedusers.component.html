@@ -1,0 +1,52 @@
+<div *ngIf="tokenCheck; else errorMessageDiv" class="container col-lg-10 col-lg-offset-1" style="margin-top: 20px">       
+  <table class="table table-striped">
+    <thead class="tableheader">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user._id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{token}}
+<ng-template #errorMessageDiv>
+<div class="container col-lg-10 col-lg-offset-1" style="margin-top: 20px">       
+   <h4>Token not found!!</h4>
+  </div>
+</ng-template>
+<!-- <div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+
+    <ng-container matColumnDef="_id">
+      <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element._id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="password">
+      <mat-header-cell *matHeaderCellDef> Password </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.password}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+  -->
+
+
+

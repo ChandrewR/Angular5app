@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+.success-snackbar{
+    background-color: rgb(69, 196, 118);
+    color: rgb(15, 14, 14);
+}
+
+.failure-snackbar{
+    background-color: rgb(228, 61, 61);
+    color: rgb(235, 229, 229);
+}

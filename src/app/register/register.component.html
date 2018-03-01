@@ -1,0 +1,23 @@
+<form (ngSubmit) = 'register()' #registerForm>
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Enter the email address" [formControl]="email" [(ngModel)] = "reqEmail" name="name" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field >
+      <input type="password" matInput placeholder="Password" [formControl]="password" [(ngModel)] = "reqPassword" name = "password" required>
+      <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-slide-toggle class="slidestyle" [formControl]="secureCheck" [(ngModel)] = "reqSecurecheck" name = "admin">Secure me</mat-slide-toggle>
+  </div>
+  <br>
+  <div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+  <br>
+  <br>
+  </form>
