@@ -1,5 +1,6 @@
 <div *ngIf="tokenCheck; else errorMessageDiv" class="container col-lg-10 col-lg-offset-1" style="margin-top: 20px">       
-  <table class="table table-striped">
+  
+  <table class="table table-striped table-hover">
     <thead class="tableheader">
       <tr>
         <th>Id</th>
@@ -15,11 +16,15 @@
       </tr>
     </tbody>
   </table>
+
+  <br>
+  <br>
+  <mat-card>{{token}}</mat-card>
 </div>
-{{token}}
+
 <ng-template #errorMessageDiv>
 <div class="container col-lg-10 col-lg-offset-1" style="margin-top: 20px">       
-   <h4>Token not found!!</h4>
+  <mat-card>Token not found - Access this API with Authentication token!</mat-card>
   </div>
 </ng-template>
 <!-- <div class="example-container mat-elevation-z8">

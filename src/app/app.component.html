@@ -5,7 +5,7 @@
     <a *ngIf="homeIcon" routerLink="" class="iconStyle"><mat-icon>home</mat-icon></a>&nbsp;&nbsp;&nbsp;
     <a mat-button class="buttonFont" routerLink="users">Users</a>
     <a mat-button class="buttonFont" routerLink="securedusers">Secured users</a>&nbsp;&nbsp;&nbsp;
-    <a *ngIf="showLogout" routerLink="" class="iconStyle"><mat-icon>input</mat-icon></a>
+    <a *ngIf="showLogout" (click) = 'logout()' routerLink="" class="iconStyle"><mat-icon>input</mat-icon></a>
     </mat-toolbar-row>
   </mat-toolbar>
   

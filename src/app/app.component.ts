@@ -15,4 +15,10 @@ export class AppComponent {
   this.loginService.castLoggedIn.subscribe(data => this.showLogout = data);
   this.loginService.castshowHomeIcon.subscribe(data => this.homeIcon = data);
   }
+
+  logout() {
+    this.loginService.setLoggedIn(false);
+    this.loginService.setshowHomeIcon(true);
+    this.loginService.setToken('');
+  }
 }

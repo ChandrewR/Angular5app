@@ -24,6 +24,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {LoginService} from './login.service';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {LoginService} from './login.service';
     HttpClientModule,
     MatTableModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [UserService,SecureduserService,LoginService],
   bootstrap: [AppComponent]

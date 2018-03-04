@@ -49,7 +49,6 @@ export class LoginComponent implements OnInit {
     {email : this.loginEmail, password : this.loginPassword})
     .subscribe((data:any) => {
       this.res = data;
-      alert(this.res.message+this.res.success+this.res.token);
       if (this.res.success) {
         this.snackBar.open("You have logged-in to the application successfully", "OK", {
           duration: 3000,
@@ -59,10 +58,6 @@ export class LoginComponent implements OnInit {
         this.loginService.setLoggedIn(true);
         this.loginService.setshowHomeIcon(false);
         this.loginService.setToken(this.res.token);
-        
-
-
-        alert('loggedin');
 
         this.router.navigate(['users']);
       }

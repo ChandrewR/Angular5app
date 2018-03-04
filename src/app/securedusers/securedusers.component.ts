@@ -19,7 +19,8 @@ export class SecuredusersComponent implements OnInit {
 
   ngOnInit() {
 
-    this.secureduserService.getSecuredUsers().subscribe(data => {this.users = data},
+    this.secureduserService.getSecuredUsers().subscribe(data => {this.users = data;
+      this.tokenCheck = true;},
     error => {
       //this.errorMessage = error;
       if (error.indexOf('403')) {
@@ -28,11 +29,8 @@ export class SecuredusersComponent implements OnInit {
     }
     );
 
-
-
-    this.loginService.castToken.subscribe(data => {this.token = data;
-      alert('Token alert'+''+this.token);
-  });
+    this.loginService.castToken.subscribe(
+      data => { this.token = data; });
     
   }
 }
